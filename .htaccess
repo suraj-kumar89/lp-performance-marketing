@@ -1,0 +1,8 @@
+
+RewriteEngine On
+
+# Redirect root URL to the landing page
+RewriteRule ^$ /performance-marketing-agency/ [R=301,L]
+
+# Serve index.html inside directories
+DirectoryIndex index.html
