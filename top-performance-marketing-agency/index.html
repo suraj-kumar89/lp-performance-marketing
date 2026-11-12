@@ -1730,12 +1730,14 @@ body > div[data-section] .it .n{font-family:'JetBrains Mono',monospace;}
 .fit tbody td.fn{color:var(--dim);}
 .fit .m{display:inline-block;flex:none;width:15px;height:15px;border-radius:5px;position:relative;
   margin-right:10px;vertical-align:-2px;}
-.fit .m-y{border:1px solid rgba(255,121,27,.5);background:rgba(255,121,27,.12);}
+.fit .m-y{border:1px solid rgba(52, 208, 88, .55);background:rgba(52,208,88,.13);}
 .fit .m-y::after{content:'';position:absolute;left:4px;top:2px;width:3.5px;height:7px;
-  border:solid var(--accent);border-width:0 1.6px 1.6px 0;transform:rotate(42deg);}
-.fit .m-n{border:1px solid rgba(245,245,247,.2);background:rgba(245,245,247,.03);}
+  border:solid #34D058;border-width:0 1.6px 1.6px 0;transform:rotate(42deg);}
+.fit .m-n{border:1px solid rgba(242,85,90,.5);background:rgba(242,85,90,.11);}
 .fit .m-n::after{content:'';position:absolute;left:2.5px;top:6px;width:8px;height:1.5px;
-  background:rgba(245,245,247,.42);}
+  background:#F2555A;transform:rotate(45deg);}
+.fit .m-n::before{content:'';position:absolute;left:3px;top:6.7px;width:9px;
+  height:1.6px;border-radius:1px;background:#F2555A;transform:rotate(-45deg);}
 .fit .foot{margin-top:clamp(28px,3vw,40px);font-size:14.6px;line-height:1.6;color:var(--faint);
   max-width:72ch;}
 .fit .foot b{color:var(--dim);font-weight:500;}
@@ -2070,6 +2072,22 @@ body > div[data-section] .it .n{font-family:'JetBrains Mono',monospace;}
 @media (max-width:860px){.ft .lpf{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px));}}
 @media (prefers-reduced-motion:reduce){.ft .rv{opacity:1;transform:none;animation:none;}
 .ft .b-1::after{animation:none;}}
+
+
+/* ---- fit markers ----
+   A grey minus beside "25,000 for ads, SEO, social and content" reads as an
+   included line item rather than a disqualifier. It is a red cross now, and the
+   good-fit tick is green, so the two columns are unmistakable at a glance. */
+
+
+.fit .m-n{border:1px solid rgba(242,85,90,.5);background:rgba(242,85,90,.11);}
+.fit .m-n::after{left:3px;top:6.7px;width:9px;height:1.6px;border-radius:1px;
+  background:#F2555A;transform:rotate(45deg);}
+.fit .m-n::before{content:'';position:absolute;left:3px;top:6.7px;width:9px;
+  height:1.6px;border-radius:1px;background:#F2555A;transform:rotate(-45deg);}
+
+@media (max-width:560px){.hero .pts{grid-template-columns:1fr;}
+  .hero .hcut{width:clamp(220px,62vw,300px);}}
 
 </style>
 </head>
